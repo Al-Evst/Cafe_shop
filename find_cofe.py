@@ -74,7 +74,7 @@ def main():
             icon=folium.Icon(color='green', icon='coffee', prefix='fa'),
         ).add_to(map)
 
-    map.save("coffee_shops_map3.html")
+    map.save("coffee_shops_map.html")
 
 
 if __name__ == '__main__':
