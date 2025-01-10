@@ -5,6 +5,7 @@ import os
 import folium
 from geopy import distance as dist
 
+APIKEY = os.getenv('apikey')
 
 def fetch_coordinates(address, apikey=None):
     base_url = "https://geocode-maps.yandex.ru/1.x"
@@ -26,7 +27,6 @@ def fetch_coordinates(address, apikey=None):
 
 def main():
     load_dotenv()
-    APIKEY = os.getenv('apikey')
     
     first_place = input('Где вы находитесь?:')
     first_cords = fetch_coordinates(address=first_place, apikey=APIKEY)
@@ -35,8 +35,7 @@ def main():
         return
     
     user_lon, user_lat = first_cords
-    print(f"Ваши координаты: {user_lat}, {user_lon}")
-
+    
     with open("coffee.json", "r", encoding="CP1251") as my_file:
         capitals_json = my_file.read()
 
