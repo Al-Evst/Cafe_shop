@@ -29,7 +29,7 @@ def main():
     load_dotenv()
     
     first_place = input('Где вы находитесь?:')
-    first_cords = fetch_coordinates(address=first_place, apikey=APIKEY)
+    first_cords = fetch_coordinates(address=first_place, apikey=api_key)
     if not first_cords:
         print("Не удалось найти ваше местоположение.")
         return
