@@ -25,7 +25,7 @@ def fetch_coordinates(address, apikey=None):
 
 
 def main():
-    apikey = os.getenv('apikey')
+    api_key = os.getenv('apikey')
     load_dotenv()
     
     first_place = input('Где вы находитесь?:')
