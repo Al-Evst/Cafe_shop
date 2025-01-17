@@ -6,7 +6,7 @@ import folium
 from geopy import distance as dist
 
 
-def fetch_coordinates(address, apikey=None):
+def fetch_coordinates(address, api_key=None):
     base_url = "https://geocode-maps.yandex.ru/1.x"
     response = requests.get(base_url, params={
         "geocode": address,
@@ -25,7 +25,7 @@ def fetch_coordinates(address, apikey=None):
 
 
 def main():
-    api_key = os.getenv('apikey')
+    api_key = os.getenv('API_KEY')
     load_dotenv()
     
     first_place = input('Где вы находитесь?:')
